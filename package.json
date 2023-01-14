@@ -1,0 +1,23 @@
+{
+  "name": "app_tailwindcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeliasalvaradoa/app_tailwindcss.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeliasalvaradoa/app_tailwindcss/issues"
+  },
+  "homepage": "https://github.com/jeliasalvaradoa/app_tailwindcss#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}

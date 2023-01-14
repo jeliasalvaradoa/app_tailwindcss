@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Libreria CDN para maquetar con TailwindCss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Libreria CDN para manejo de iconos de redes sociales que se usas en este proyecto-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Libreria alpinejs para menejo de los eventos del menù cuando se hace click-->
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+    <title>Platzi Food</title>
+</head>
+
+<body>
+    <div>
+        <nav x-data="{open: false}" class="fixed top-0 z-50 w-full bg-gray-900 text-gray-100">
+            <div class="bg-gray-900 text-white flex justify-between items-center">
+                <div><img class="h-8 py-1" src="/public/imagenes/logo-w.svg" alt="" srcset=""></div>
+                <div class="text-2xl cursor-pointer" @click="open = true">&equiv;</div>
+            </div>
+            <div x-show="open" @click.away="open = false">
+                <div class="mt-1 mx-2">
+                    <input
+                        class="w-full leading-snug text-gray-800 placeholder-gray-500 py-1 px-4 rounded border border-blue-300 bg-gray-200"
+                        type="search" name="Busqueda" placeholder="Búsqueda" id="">
+                </div>
+                <div class="py-1 mx-2 md:flex justify-around">
+                    <div class="flex">
+                        Precio:
+                        <div class="ml-2">$</div>
+                        <div class="ml-2 text-yellow-500">$$</div>
+                        <div class="ml-2">$$$</div>
+                        <div class="ml-2">$$$$</div>
+                    </div>
+                    <div class="flex">
+                        <div>
+                            Califición
+                        </div>
+                        <div class="ml-2 text-yellow-500">&starf;</div>
+                        <div class="ml-px text-yellow-500">&starf;</div>
+                        <div class="ml-px text-yellow-500">&starf;</div>
+                        <div class="ml-px text-yellow-500">&starf;</div>
+                        <div class="ml-px">&star;</div>
+                    </div>
+                    <div><button
+                            class="rounded shadow-lg py-1 px-4 block bg-yellow-500 text-white hover:shadow-none hover:bg-gray-500 hover:text-gray-800">
+                            Filtrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main class="mb-8 w-full">
+        <div class="h-64 md:h-96 w-full md:bg-center bg-no-repeat  bg-cover bg-bottom"
+            style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80');">
+        </div>
+
+        <div class="container mx-auto md:grid md:grid-cols-2">
+            <div class="mx-2 mt-4 xl:grid  xl:grid-cols-2 md:bg-white rounded-lg">
+                <div class="">
+                    <img class="w-full md:ml-0 object-cover rounded-lg xl:rounded-r-none" src="/public/imagenes/h2c.png"
+                        alt="hamburguesa">
+                </div>
+                <div class="relative mx-2 p-2 xl:shadow-none shadow-lg bg-white xl:bg-transparent rounded-lg -mt-2">
+                    <h2 class="text-xl md:text-lg tracking-tight font-semibold uppercase text-gray-700 ">Hamburguesa doble carne con tocineta</h2>
+                    <p class="text-gray-600 leading-snug">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Distinctio ipsum blanditiis maxime.</p>
+                        <div class="flex my-5">
+                    <div class="mt-2 text-sm font-semibold text-gray-700">$4.99</div>
+                    <div class="ml-4"><button
+                        class="rounded shadow-lg py-1 px-4 block bg-yellow-500 text-white hover:shadow-none hover:bg-gray-500 hover:text-gray-800">
+                            Ordenar
+                    </button>
+                </div>
+            </div>
+                    <div class="mt-2 text-xs text-yellow-700">&starf;&starf;&starf;&starf;&star; / 49 reseñas</div>
+                </div>
+
+            </div>
+            <div class="mx-2 mt-4 xl:grid xl:grid-cols-2 md:bg-white rounded-lg">
+                <div class="">
+                    <img class="w-full md:ml-0 object-cover rounded-lg xl:rounded-r-none" src="/public/imagenes/2cq.png"
+                        alt="hamburguesa">
+                </div>
+                <div class="relative mx-2 p-2 xl:shadow-none shadow-lg bg-white xl:bg-transparent rounded-lg -mt-2">
+                    <h2 class="text-xl md:text-lg tracking-tight font-semibold uppercase text-gray-700 ">Hamburguesa
+                        doble
+                        carne con queso cheddar</h2>
+                    <p class="text-gray-600 leading-snug">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Distinctio ipsum blanditiis maxime.</p>
+                        <div class="flex my-5">
+                            <div class="mt-2 text-sm font-semibold text-gray-700">$3.99</div>
+                            <div class="ml-4"><button
+                                class="rounded shadow-lg py-1 px-4 block bg-yellow-500 text-white hover:shadow-none hover:bg-gray-500 hover:text-gray-800">
+                                    Ordenar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-xs text-yellow-700">&starf;&starf;&starf;&starf;&star; / 99 reseñas</div>
+                </div>
+
+            </div>
+            <div class="mx-2 mt-4 xl:grid xl:grid-cols-2 md:bg-white rounded-lg">
+                <div class="">
+                    <img class="w-full md:ml-0 object-cover  rounded-lg xl:rounded-r-none" src="/public/imagenes/h.png"
+                        alt="hamburguesa">
+                </div>
+                <div class="relative mx-2 p-2 xl:shadow-none shadow-lg bg-white xl:bg-transparent rounded-lg -mt-2">
+                    <h2 class="text-xl md:text-lg tracking-tight font-semibold uppercase text-gray-700">Hamburguesa
+                        de
+                        carne  con papas fritas</h2>
+                    <p class="text-gray-600 leading-snug">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Distinctio ipsum blanditiis maxime.</p>
+                        <div class="flex my-5">
+                            <div class="mt-2 text-sm font-semibold text-gray-700">$4.99</div>
+                            <div class="ml-4"><button
+                                class="rounded shadow-lg py-1 px-4 block bg-yellow-500 text-white hover:shadow-none hover:bg-gray-500 hover:text-gray-800">
+                                    Ordenar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-xs text-yellow-700">&starf;&starf;&starf;&starf;&star; / 99 reseñas</div>
+                </div>
+
+            </div>
+            <div class="mx-2 mt-4 xl:grid xl:grid-cols-2 md:bg-white rounded-lg">
+                <div class="">
+                    <img class="w-full md:ml-0 object-cover rounded-lg xl:rounded-r-none" src="/public/imagenes/3p2.png"
+                        alt="hamburguesa">
+                </div>
+                <div class="relative mx-2 p-2 xl:shadow-none shadow-lg bg-white xl:bg-transparent rounded-lg -mt-2">
+                    <h2 class="text-xl md:text-lg tracking-tight font-semibold uppercase text-gray-700"> Hamburguesa de carne combo triple 
+                </h2>
+                    <p class="text-gray-600 leading-snug">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Distinctio ipsum blanditiis maxime.</p>
+                        <div class="flex my-5">
+                            <div class="mt-2 text-sm font-semibold text-gray-700">$5.99</div>
+                            <div class="ml-4"><button
+                                class="rounded shadow-lg py-1 px-4 block bg-yellow-500 text-white hover:shadow-none hover:bg-gray-500 hover:text-gray-800">
+                                    Ordenar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-xs text-yellow-700">&starf;&starf;&starf;&starf;&star; / 99 reseñas</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container mx-auto mt-4 px-2">
+            <div>
+                <div>Nombre</div>
+                <input
+                    class="w-full leading-snug text-gray-800 placeholder-gray-500 py-1 px-4 rounded border border-blue-300 bg-gray-200 hover:bg-white focus:outline-none focus:shadow-outline"
+                    type="text" placeholder="Nombre">
+            </div>
+            <div>
+                <div>Email</div>
+                <input
+                    class="w-full leading-snug text-gray-800 placeholder-gray-500 py-1 px-4 rounded border border-blue-300 bg-gray-200 hover:bg-white focus:outline-none focus:shadow-outline"
+                    type="email" placeholder="Email">
+            </div>
+            <div>
+                <div>Comentarios</div>
+                <textarea
+                    class="w-full leading-snug text-gray-800 placeholder-gray-500 py-1 px-4 rounded border border-blue-300 bg-gray-200 hover:bg-white focus:outline-none focus:shadow-outline"
+                    name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="mt-4">
+                <button
+                    class="rounded shadow-xl py-1 px-4 bg-gray-500 mx-auto block hover:shadow-none hover:bg-gray-700 hover:text-white">Enviar</button>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer class="w-full bg-gray-900 text-white">
+        <div class="md:flex md:flex-row-reverse justify-around">
+            <div class="ml-8 pt-4">
+                <div class="hover:text-blue-600"><i class="fa fa-facebook"> /facebook</i></div>
+                <div class="hover:text-blue-400"><i class="fa fa-twitter"> @platzifood</i></div>
+                <div class="hover:text-violet-800"><i class="fa fa-instagram"> @platzifood</i></div>
+            </div>
+            <ul class=" mt-4 pb-2 ml-12 list-disc">
+                <li>Soporte</li>
+                <li>Acerca de nosotros</li>
+                <li>Registro</li>
+                <li>Aviso de privacidad</li>
+
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
