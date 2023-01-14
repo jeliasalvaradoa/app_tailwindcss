@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d public"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jeliasalvaradoa/app_tailwindcss/issues"
   },
-  "homepage": "https://github.com/jeliasalvaradoa/app_tailwindcss#readme"
+  "homepage": "https://github.com/jeliasalvaradoa/app_tailwindcss#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
